@@ -1,8 +1,6 @@
-'use strict';
+const dbConn = require('./../../config/db.config');
 
-var dbConn = require('./../../config/db.config');
-
-var Article = function(article){
+const Article = function (article) {
     this.title = article.title;
     this.description = article.description;
     this.author = article.author;

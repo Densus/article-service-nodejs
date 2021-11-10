@@ -2,7 +2,7 @@ const articleModel = require('./../models/article.model');
 
 const findAll = async (result) => {
     try {
-        return await articleModel.findAll(result);
+        await articleModel.findAll(result);
     } catch (e) {
         throw new Error(e.message)
     }
@@ -10,7 +10,7 @@ const findAll = async (result) => {
 
 const create = async (newArticle, result) => {
     try {
-        return await articleModel.create(newArticle, result)
+        await articleModel.create(newArticle, result)
     } catch (e) {
         throw new Error(e.message)
     }
@@ -18,7 +18,7 @@ const create = async (newArticle, result) => {
 
 const update = async (id, article, result) => {
     try {
-        return await articleModel.update(id, article, result);
+        await articleModel.update(id, article, result);
     } catch (e) {
         throw new Error(e.message)
     }
@@ -26,7 +26,7 @@ const update = async (id, article, result) => {
 
 const findById = async (id, result) => {
     try {
-        return await articleModel.findById(id, result);
+        await articleModel.findById(id, result);
     } catch (e) {
         throw new Error(e.message);
     }
@@ -34,7 +34,7 @@ const findById = async (id, result) => {
 
 const deleteById = async (id, result) => {
     try {
-        return await articleModel.delete(id, result);
+        await articleModel.delete(id, result);
     } catch (e) {
         throw new Error(e.message);
     }

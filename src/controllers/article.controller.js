@@ -8,7 +8,7 @@ const findAll = async (req, res) => {
         await articleService.findAll(function(err, article) {
             if (err)
             res.send(err);
-            res.status(200).json({ status: 200, data: article, message: "Articles Succesfully Retrieved" });
+            res.status(200).json({ status: 200, data: article, message: "Articles Successfully Retrieved" });
           });
     } catch (e) {
         res.status(400).json({ status: 400, message: e.message })
